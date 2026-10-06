@@ -1,0 +1,63 @@
+dmgen — уведомления о стороннем коде
+====================================
+
+dmgen — проприетарная программа. В её поставку (утилита dmgen, библиотеки
+libdmgen и dmgen_c, колёса Python) входит или из неё выведен перечисленный
+ниже сторонний код. Полные тексты лицензий лежат в каталоге licenses/
+этого репозитория, в share/doc/dmgen/licenses/ двоичных поставок и в
+dmgen-*.dist-info/licenses/ колеса Python.
+English version: THIRD-PARTY-NOTICES.txt.
+
+
+1. stb_image_write 1.16
+   Запись PNG и JPEG.
+   Copyright (c) 2017 Sean Barrett; https://github.com/nothings/stb
+   Лицензия: public domain (Unlicense) или MIT — на выбор.
+   Файл: stb-LICENSE.txt
+
+2. Monocypher 4.0.2
+   Проверка подписи Ed25519 токена лицензии.
+   Copyright (c) 2017-2023 Loup Vaillant, Michael Savage, Fabio Scotoni
+   Лицензия: CC0 1.0 или BSD 2-Clause — на выбор.
+   Файл: monocypher-LICENCE.md
+
+3. Код, выведенный из libdmtx
+   Часть модуля кодирования данных (потоковый кодер схем DataMatrix)
+   выведена из кодера libdmtx (dmtxencodescheme.c и соседние файлы) и
+   изменена.
+   Copyright 2005-2016 Mike Laughton, Vadim A. Misbakh-Soloviov and others.
+   All rights reserved.
+   Лицензия: BSD 2-Clause.
+   Файл: libdmtx-LICENSE.txt
+
+4. Код, выведенный из ZXing
+   Часть модуля кодирования данных (предпросмотр по приложению P
+   ISO/IEC 16022) выведена из ZXing (HighLevelEncoder) и изменена.
+   Copyright (C) ZXing authors.
+   Лицензия: Apache License, Version 2.0.
+   Файл: Apache-2.0-zxing.txt
+
+5. Только в сборках под Windows (MinGW-w64, компоновка со -static):
+   рантайм MinGW-w64, winpthreads, libgcc и libstdc++ вкомпонованы в
+   исполняемые файлы и dmgen_c.dll.
+   - Рантайм MinGW-w64 (CRT) — Copyright (c) the mingw-w64 project;
+     лицензии в файле MinGW-w64-runtime-COPYING.txt.
+   - winpthreads — Copyright (c) 2011 mingw-w64 project; MIT-подобная
+     лицензия, файл winpthreads-COPYING.txt.
+   - libgcc и libstdc++ (GCC) — Copyright (C) Free Software Foundation, Inc.;
+     GNU GPL версии 3 с исключением GCC Runtime Library Exception 3.1,
+     которое разрешает распространять программы, скомпонованные с этими
+     библиотеками, на любых условиях. Файлы GCC-COPYING.RUNTIME.txt и
+     GCC-COPYING3.txt.
+   В сборках под Linux эти компоненты не вкомпонованы; файлы их лицензий
+   лежат в поставке для единообразия.
+
+
+Товарные знаки
+--------------
+
+«GS1» — товарный знак GS1 AISBL. «Честный знак» — товарный знак
+ООО «Оператор-ЦРПТ». «Data Matrix» — название символики штрихового кода по
+ISO/IEC 16022. dmgen не связан с владельцами этих знаков и ими не
+сертифицирован; названия упоминаются только для описания поддерживаемого
+формата.

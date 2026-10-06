@@ -1,0 +1,63 @@
+dmgen — third-party notices
+===========================
+
+dmgen is proprietary software. Its distribution (the dmgen utility, the
+libdmgen and dmgen_c libraries, the Python wheels) includes or is derived from
+the third-party code listed below. The full license texts are in the licenses/
+directory of this repository, in share/doc/dmgen/licenses/ of the binary
+packages and in dmgen-*.dist-info/licenses/ of the Python wheel.
+Russian version: THIRD-PARTY-NOTICES.ru.txt.
+
+
+1. stb_image_write 1.16
+   PNG and JPEG writing.
+   Copyright (c) 2017 Sean Barrett; https://github.com/nothings/stb
+   License: public domain (Unlicense) or MIT, at your choice.
+   File: stb-LICENSE.txt
+
+2. Monocypher 4.0.2
+   Ed25519 signature verification of the license token.
+   Copyright (c) 2017-2023 Loup Vaillant, Michael Savage, Fabio Scotoni
+   License: CC0 1.0 or BSD 2-Clause, at your choice.
+   File: monocypher-LICENCE.md
+
+3. Code derived from libdmtx
+   Parts of the data encodation module (the streaming DataMatrix scheme
+   encoder) are derived from the libdmtx encoder (dmtxencodescheme.c and
+   related files) and modified.
+   Copyright 2005-2016 Mike Laughton, Vadim A. Misbakh-Soloviov and others.
+   All rights reserved.
+   License: BSD 2-Clause.
+   File: libdmtx-LICENSE.txt
+
+4. Code derived from ZXing
+   Parts of the data encodation module (the look-ahead algorithm of
+   ISO/IEC 16022 Annex P) are derived from ZXing (HighLevelEncoder) and
+   modified.
+   Copyright (C) ZXing authors.
+   License: Apache License, Version 2.0.
+   File: Apache-2.0-zxing.txt
+
+5. Windows builds only (MinGW-w64, linked with -static):
+   the MinGW-w64 runtime, winpthreads, libgcc and libstdc++ are linked into
+   the executables and dmgen_c.dll.
+   - MinGW-w64 runtime (CRT) — Copyright (c) the mingw-w64 project;
+     licenses in MinGW-w64-runtime-COPYING.txt.
+   - winpthreads — Copyright (c) 2011 mingw-w64 project; MIT-style license,
+     file winpthreads-COPYING.txt.
+   - libgcc and libstdc++ (GCC) — Copyright (C) Free Software Foundation, Inc.;
+     GNU GPL version 3 with the GCC Runtime Library Exception 3.1, which
+     permits distributing programs linked with these libraries under any
+     terms. Files GCC-COPYING.RUNTIME.txt and GCC-COPYING3.txt.
+   In Linux builds these components are not linked in; their license files
+   are shipped for consistency.
+
+
+Trademarks
+----------
+
+"GS1" is a trademark of GS1 AISBL. "Chestny Znak" (Честный знак) is a
+trademark of LLC "Operator-CRPT" (ООО «Оператор-ЦРПТ»). "Data Matrix" is the
+name of the barcode symbology defined in ISO/IEC 16022. dmgen is not
+affiliated with or certified by the owners of these marks; the names are used
+only to describe the supported format.
