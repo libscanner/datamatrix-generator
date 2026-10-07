@@ -35,6 +35,7 @@
 ## Загрузка
 
 - **Сборки:** [выпуски на GitHub → последний](https://github.com/libscanner/datamatrix-generator/releases/latest) — архивы для каждой платформы и колёса Python.
+- **Python:** [PyPI → libscanner-dmgen](https://pypi.org/project/libscanner-dmgen/) — `pip install libscanner-dmgen`, импорт — `dmgen`.
 - **Лицензии:** тарифы на <https://libscanner.com/> — год или бессрочно (<https://libscanner.com/products/datamatrix-generator-yearly>, <https://libscanner.com/products/datamatrix-generator-perpetual>). Ключ активации появляется в личном кабинете после покупки.
 
 ### Пробный период
@@ -98,7 +99,7 @@ executable('myprogram', 'main.cpp', dependencies: [dmgen_dep],
 ### Python
 
 ```sh
-pip install dmgen-1.0.0-py3-none-win_amd64.whl     # колесо своей платформы
+pip install libscanner-dmgen     # PyPI: Windows x64, Linux x86-64 / ARM64 / ARMv7 (glibc 2.36+)
 ```
 
 ```python

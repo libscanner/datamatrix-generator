@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: MIT-0
 """Generate DataMatrix codes with the dmgen Python package.
 
-Install the wheel for your platform from GitHub Releases first:
+Install the package from PyPI first:
 
-    pip install dmgen-1.0.0-py3-none-win_amd64.whl
+    pip install libscanner-dmgen
 
 Usage:
 

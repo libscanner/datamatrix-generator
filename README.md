@@ -35,6 +35,7 @@ Each platform also has a CLI-only archive (`…-cli.zip` / `…-cli.tar.gz`) wit
 ## Download
 
 - **Binaries:** [GitHub Releases → latest](https://github.com/libscanner/datamatrix-generator/releases/latest) — archives for each platform and Python wheels.
+- **Python:** [PyPI → libscanner-dmgen](https://pypi.org/project/libscanner-dmgen/) — `pip install libscanner-dmgen`, imported as `dmgen`.
 - **Licenses:** buy a plan at <https://libscanner.com/en/> — 1 year or perpetual (<https://libscanner.com/en/products/datamatrix-generator-yearly>, <https://libscanner.com/en/products/datamatrix-generator-perpetual>). The activation key appears in your account after purchase.
 
 ### Trial
@@ -98,7 +99,7 @@ Complete example: [`examples/cpp`](https://github.com/libscanner/datamatrix-gene
 ### Python
 
 ```sh
-pip install dmgen-1.0.0-py3-none-win_amd64.whl     # pick the wheel for your platform
+pip install libscanner-dmgen     # PyPI: Windows x64, Linux x86-64 / ARM64 / ARMv7 (glibc 2.36+)
 ```
 
 ```python
