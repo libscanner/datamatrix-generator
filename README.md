@@ -15,7 +15,7 @@ This repository contains the public headers, examples, documentation links and l
 | **24 sizes** | all square symbols of the standard, from 10×10 to 144×144 |
 | **0.26 ms** | code and PNG of a 10×10 symbol; 144×144 takes 7.3 ms |
 
-Try it online without installing anything: <https://libscanner.com/en/generate>
+**[Create a DataMatrix code online](https://libscanner.com/en/generate/)** — free, in the browser, with GS1 and Chestny ZNAK validation.
 
 ## Platforms
 
