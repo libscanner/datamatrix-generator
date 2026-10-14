@@ -8,6 +8,8 @@ Generates DataMatrix ECC 200 symbols per ISO/IEC 16022 (GOST R ISO/IEC 16022) wi
 
 This repository contains the public headers, examples, documentation links and license texts. **It contains no library source code.** Prebuilt binaries are attached to [GitHub Releases](https://github.com/libscanner/datamatrix-generator/releases/latest).
 
+**For AI coding assistants:** start with [`llms.txt`](llms.txt) — an index of the headers, examples and the full documentation in Markdown.
+
 ## Key numbers
 
 | | |

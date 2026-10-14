@@ -1,0 +1,39 @@
+# DataMatrix Generator (dmgen)
+
+> Commercial C++20 library that generates DataMatrix ECC 200 symbols per ISO/IEC 16022 (GOST R ISO/IEC 16022), with validation against the GS1 General Specifications and the Chestny ZNAK (Russian product marking) profile, and outputs PNG or JPEG for marking print. Static C++ API, flat C ABI (`dmgen_c`), Python package (`pip install libscanner-dmgen`, `import dmgen`) and the `dmgen` command-line tool, for Windows x64 and Linux (x86-64, ARM64, ARMv7). All 24 square sizes, six encodation schemes; every symbol is read back by the library itself before it is returned. The public C++ API does not throw: anything that can fail returns `Result<T>`. This repository holds the public headers, examples and license texts — no library source; prebuilt packages are in GitHub Releases. The library runs a trial period (one month from the first run on a machine, no network needed); after that a license from https://libscanner.com is required.
+
+The public headers are the authoritative API reference: every type, field and function is commented in English. Read them before writing code against the library.
+
+## API reference (headers in this repository)
+
+- [include/dmgen/Dmgen.h](include/dmgen/Dmgen.h): umbrella header — includes the whole C++ API
+- [include/dmgen/Encoder.h](include/dmgen/Encoder.h): `dmgen::encode(data, options)` → `Result<Symbol>`
+- [include/dmgen/Options.h](include/dmgen/Options.h): encoding options (size, scheme, GS1 mode)
+- [include/dmgen/Gs1.h](include/dmgen/Gs1.h): validation of a string against GS1 and the Chestny ZNAK profile
+- [include/dmgen/Symbol.h](include/dmgen/Symbol.h): symbol sizes and the assembled symbol
+- [include/dmgen/Image.h](include/dmgen/Image.h): symbol raster, PNG and JPEG
+- [include/dmgen/Result.h](include/dmgen/Result.h): `Result<T>` — a value or an error
+- [include/dmgen/License.h](include/dmgen/License.h): trial and license status, activation
+- [include/dmgen/Version.h](include/dmgen/Version.h): library version
+- [include/dmgen/dmgen_c.h](include/dmgen/dmgen_c.h): the flat C ABI (`dmgen_c` shared library) — for C, MSVC, C#, Go, Delphi and other languages
+
+## Examples
+
+- [examples/cpp/main.cpp](examples/cpp/main.cpp): C++, static linking ([build notes](examples/cpp/README.md), [meson.build](examples/cpp/meson.build))
+- [examples/c/main.c](examples/c/main.c): C via the C ABI ([build notes](examples/c/README.md))
+- [examples/python/example.py](examples/python/example.py): Python package
+- [examples/cli/README.md](examples/cli/README.md): the `dmgen` command-line tool
+
+## Docs
+
+- [Full documentation — C++ and C ABI (Markdown)](https://libscanner.com/en/docs/datamatrix-generator/1.0/cpp.md): installation, linking on Windows and Linux, options, GS1 input forms, errors, licensing, command line
+- [Full documentation — Python (Markdown)](https://libscanner.com/en/docs/datamatrix-generator/1.0/python.md)
+- [Both libraries, all documentation in one file](https://libscanner.com/llms-full.txt)
+- [README](README.md): platforms, release files, key numbers
+
+## Optional
+
+- [Create DataMatrix online](https://libscanner.com/en/generate): the same generator as a browser demo
+- [Releases](https://github.com/libscanner/datamatrix-generator/releases/latest): prebuilt packages and Python wheels with SHA256SUMS
+- [CHANGELOG.md](CHANGELOG.md)
+- [LICENSE.en.txt](LICENSE.en.txt): end-user license agreement
