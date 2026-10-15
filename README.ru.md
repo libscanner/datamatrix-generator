@@ -21,10 +21,10 @@
 
 | Платформа | Статическая библиотека C++ + C ABI + утилита | Колесо Python |
 |---|---|---|
-| Windows x64 | `dmgen-1.0.0-windows-x64.zip` | `dmgen-1.0.0-py3-none-win_amd64.whl` |
-| Linux x86-64 | `dmgen-1.0.0-linux-x64.tar.gz` | `dmgen-1.0.0-py3-none-manylinux_2_36_x86_64.whl` |
-| Linux ARM64 (Raspberry Pi 3/4/5, 64 бит) | `dmgen-1.0.0-linux-arm64.tar.gz` | `dmgen-1.0.0-py3-none-manylinux_2_36_aarch64.whl` |
-| Linux ARMv7 (Raspberry Pi 2/3/4/5, 32 бит) | `dmgen-1.0.0-linux-armhf.tar.gz` | `dmgen-1.0.0-py3-none-manylinux_2_36_armv7l.whl` |
+| Windows x64 | `dmgen-1.0.1-windows-x64.zip` | `libscanner_dmgen-1.0.1-py3-none-win_amd64.whl` |
+| Linux x86-64 | `dmgen-1.0.1-linux-x64.tar.gz` | `libscanner_dmgen-1.0.1-py3-none-manylinux_2_36_x86_64.whl` |
+| Linux ARM64 (Raspberry Pi 3/4/5, 64 бит) | `dmgen-1.0.1-linux-arm64.tar.gz` | `libscanner_dmgen-1.0.1-py3-none-manylinux_2_36_aarch64.whl` |
+| Linux ARMv7 (Raspberry Pi 2/3/4/5, 32 бит) | `dmgen-1.0.1-linux-armhf.tar.gz` | `libscanner_dmgen-1.0.1-py3-none-manylinux_2_36_armv7l.whl` |
 
 Для каждой платформы есть и архив только с утилитой `dmgen` (`…-cli.zip` / `…-cli.tar.gz`).
 
@@ -54,7 +54,7 @@ bin/dmgen                                   утилита командной с
 share/doc/dmgen/licenses/                   лицензии стороннего кода
 ```
 
-Заголовки в [`include/`](https://github.com/libscanner/datamatrix-generator/tree/main/include/dmgen) этого репозитория побайтно совпадают с заголовками поставки 1.0.0.
+Заголовки в [`include/`](https://github.com/libscanner/datamatrix-generator/tree/main/include/dmgen) этого репозитория объявляют тот же API, что заголовки поставки 1.0.1; отличаются только комментарии (здесь — на английском, в поставке — на русском).
 
 ## Быстрый старт
 
@@ -83,7 +83,7 @@ int main() {
 Статическая линковка через pkg-config — запрос **обязательно** с `--static`:
 
 ```sh
-PKG_CONFIG_PATH=/путь/к/dmgen-1.0.0-linux-x64/lib/pkgconfig pkg-config --static --cflags --libs dmgen
+PKG_CONFIG_PATH=/путь/к/dmgen-1.0.1-linux-x64/lib/pkgconfig pkg-config --static --cflags --libs dmgen
 ```
 
 В Meson:

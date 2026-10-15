@@ -10,7 +10,7 @@ Requirements:
 Download and unpack the archive for your platform from [Releases](https://github.com/libscanner/datamatrix-generator/releases/latest), then:
 
 ```sh
-meson setup build --pkg-config-path=/path/to/dmgen-1.0.0-linux-x64/lib/pkgconfig
+meson setup build --pkg-config-path=/path/to/dmgen-1.0.1-linux-x64/lib/pkgconfig
 meson compile -C build
 ./build/test_dmgen                                             # default Chestny ZNAK sample -> code.png
 ./build/test_dmgen "(01)04601234567893(21)5Abc12Xyz!-(93)dGVz" label.png
@@ -19,7 +19,7 @@ meson compile -C build
 Without Meson — the pkg-config query must be `--static`:
 
 ```sh
-export PKG_CONFIG_PATH=/path/to/dmgen-1.0.0-linux-x64/lib/pkgconfig
+export PKG_CONFIG_PATH=/path/to/dmgen-1.0.1-linux-x64/lib/pkgconfig
 g++ -std=c++20 -O2 main.cpp -o test_dmgen $(pkg-config --static --cflags --libs dmgen)
 # Windows (MINGW64): add -static to link the compiler runtime into the .exe
 ```

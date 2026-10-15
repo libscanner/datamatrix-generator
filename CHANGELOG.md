@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-10-15
+
+Security fixes from an internal audit; generated symbols are unchanged.
+
+- Windows: a shared `%ProgramData%\dmgen` copy of the license state owned by another non-admin user is ignored rather than read.
+- Release packaging: a build without optimisation is no longer exempt from the license check, and wheels refuse build passports that are not for customers.
+
 ## 1.0.0 — 2026-10-04
 
 First public release.
