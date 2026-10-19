@@ -3,8 +3,8 @@
 
 #define DMGEN_VERSION_MAJOR 1
 #define DMGEN_VERSION_MINOR 0
-#define DMGEN_VERSION_PATCH 1
-#define DMGEN_VERSION_STRING "1.0.1"
+#define DMGEN_VERSION_PATCH 2
+#define DMGEN_VERSION_STRING "1.0.2"
 
 #ifdef __cplusplus
 namespace dmgen {
