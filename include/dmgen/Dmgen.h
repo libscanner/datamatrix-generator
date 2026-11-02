@@ -12,6 +12,7 @@
 #include "dmgen/Encoder.h"
 #include "dmgen/Gs1.h"
 #include "dmgen/Image.h"
+#include "dmgen/Language.h"
 #include "dmgen/Options.h"
 #include "dmgen/Result.h"
 #include "dmgen/Symbol.h"
