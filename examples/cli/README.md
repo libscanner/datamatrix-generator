@@ -2,7 +2,7 @@
 
 The `dmgen` tool ships in every archive (`bin/dmgen`, `bin\dmgen.exe`), in the CLI-only archives (`…-cli.zip` /
 `…-cli.tar.gz`) and in the Python wheel (after `pip install` the `dmgen` command is on the environment's `PATH`;
-`python -m dmgen` works too). Full option list: `dmgen --help` (in Russian).
+`python -m dmgen` works too). Full option list: `dmgen --help`. Messages are in the system language (English on any non-Russian system); `--lang en|ru` or `LIBSCANNER_LANG` set it explicitly.
 
 ## Usage
 
