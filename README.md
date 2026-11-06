@@ -23,10 +23,10 @@ This repository contains the public headers, examples, documentation links and l
 
 | Platform | C++ static library + C ABI + CLI | Python wheel |
 |---|---|---|
-| Windows x64 | `dmgen-1.0.3-windows-x64.zip` | `libscanner_dmgen-1.0.3-py3-none-win_amd64.whl` |
-| Linux x86-64 | `dmgen-1.0.3-linux-x64.tar.gz` | `libscanner_dmgen-1.0.3-py3-none-manylinux_2_36_x86_64.whl` |
-| Linux ARM64 (Raspberry Pi 3/4/5, 64-bit) | `dmgen-1.0.3-linux-arm64.tar.gz` | `libscanner_dmgen-1.0.3-py3-none-manylinux_2_36_aarch64.whl` |
-| Linux ARMv7 (Raspberry Pi 2/3/4/5, 32-bit) | `dmgen-1.0.3-linux-armhf.tar.gz` | `libscanner_dmgen-1.0.3-py3-none-manylinux_2_36_armv7l.whl` |
+| Windows x64 | `dmgen-1.1.0-windows-x64.zip` | `libscanner_dmgen-1.1.0-py3-none-win_amd64.whl` |
+| Linux x86-64 | `dmgen-1.1.0-linux-x64.tar.gz` | `libscanner_dmgen-1.1.0-py3-none-manylinux_2_36_x86_64.whl` |
+| Linux ARM64 (Raspberry Pi 3/4/5, 64-bit) | `dmgen-1.1.0-linux-arm64.tar.gz` | `libscanner_dmgen-1.1.0-py3-none-manylinux_2_36_aarch64.whl` |
+| Linux ARMv7 (Raspberry Pi 2/3/4/5, 32-bit) | `dmgen-1.1.0-linux-armhf.tar.gz` | `libscanner_dmgen-1.1.0-py3-none-manylinux_2_36_armv7l.whl` |
 
 Each platform also has a CLI-only archive (`…-cli.zip` / `…-cli.tar.gz`) with just the `dmgen` tool.
 
@@ -44,6 +44,8 @@ Each platform also has a CLI-only archive (`…-cli.zip` / `…-cli.tar.gz`) wit
 
 Every build works for **30 days from the first run on a machine** — no registration, no key, no network access during the trial. After that a license key from <https://libscanner.com> is required; until then `encode()` returns `ErrorCode::Unlicensed`. GS1 validation and rendering an existing matrix do not require a license.
 
+**Containers (Docker, Kubernetes)** — since 1.1 a container has no trial without a key: the library runs under an **instance** license, the key goes into the `DMGEN_LICENSE_KEY` environment variable or the `/run/secrets/dmgen.key` secret, and containers can be recreated freely. Get a container trial key (2 instances, 30 days) in your account at <https://libscanner.com/en/>. Details: [license in Docker and Kubernetes](https://libscanner.com/en/articles/library-license-docker-kubernetes/).
+
 ## Package contents
 
 ```text
@@ -56,7 +58,7 @@ bin/dmgen                                   command-line tool
 share/doc/dmgen/licenses/                   third-party licenses
 ```
 
-The headers in [`include/`](https://github.com/libscanner/datamatrix-generator/tree/main/include/dmgen) of this repository declare exactly the same API as the headers shipped in the 1.0.3 packages; only the comments differ (translated to English here, Russian in the packages).
+The headers in [`include/`](https://github.com/libscanner/datamatrix-generator/tree/main/include/dmgen) of this repository declare exactly the same API as the headers shipped in the 1.1.0 packages; only the comments differ (translated to English here, Russian in the packages).
 
 ## Quick start
 
@@ -85,7 +87,7 @@ int main() {
 Link statically through pkg-config — the query **must** be `--static`:
 
 ```sh
-PKG_CONFIG_PATH=/path/to/dmgen-1.0.3-linux-x64/lib/pkgconfig pkg-config --static --cflags --libs dmgen
+PKG_CONFIG_PATH=/path/to/dmgen-1.1.0-linux-x64/lib/pkgconfig pkg-config --static --cflags --libs dmgen
 ```
 
 In Meson:
