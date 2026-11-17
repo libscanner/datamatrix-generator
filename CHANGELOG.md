@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.1 — 2026-11-17
+
+Instance license fixes; generated symbols are unchanged.
+
+- **A worker process after fork gets its own instance.** Workers forked from a process that already encoded (gunicorn with `--preload`, `multiprocessing`) shared the parent's seat and would stop after 7 days without their own reports. Now a worker starts its own instance on its first encode; without a connection it works on the parent's token until its deadline. A forked worker that exits no longer releases the parent's seat.
+- **The seat is freed on a normal exit** (`/instance/stop`, at most 2 s): before, every short run of the utility in a container kept a seat for an hour, and the fifth short run with 2 paid seats got "all seats are taken". "All seats are taken" is now retried every 5 minutes instead of once an hour.
+- The instance version shown in your account is "dmgen <version>" (it was empty); a refused key says "The key was not accepted: …" without a file name (the key may come from a variable or a secret).
+- **License server refusal explained**: the code `CLIENT_OUTDATED` (a request without a nonce) — an outdated program or a request altered on the way (a proxy, an antivirus that inspects HTTPS).
+
 ## 1.1.0 — 2026-11-06
 
 Licensing for containers; generated symbols are unchanged.
