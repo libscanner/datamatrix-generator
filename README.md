@@ -1,12 +1,14 @@
 **English** | [Русский](https://github.com/libscanner/datamatrix-generator/blob/main/README.ru.md)
 
-# DataMatrix Generator library (dmgen)
+# libscanner dmgen — DataMatrix Generator library
 
 Generates DataMatrix ECC 200 symbols per ISO/IEC 16022 (GOST R ISO/IEC 16022) with GS1 and Chestny ZNAK profile validation — PNG and JPEG for marking print.
 
-`dmgen` is a commercial, closed-source C++20 library with a flat C ABI, a Python package and a command-line tool. It supports all 24 square sizes, six encodation schemes (ASCII, C40, Text, X12, EDIFACT, Base256) and a GS1 mode that validates the string against the GS1 General Specifications and the Chestny ZNAK profile (Russia's national product marking system). Every symbol is read back by the library itself before it is returned — a symbol that fails the self-check is never output. The public API does not throw: anything that can fail returns `Result<T>`.
+**libscanner dmgen** (`pip install libscanner-dmgen`) is a commercial, closed-source C++20 library with a flat C ABI, a Python package and a command-line tool. It supports all 24 square sizes, six encodation schemes (ASCII, C40, Text, X12, EDIFACT, Base256) and a GS1 mode that validates the string against the GS1 General Specifications and the Chestny ZNAK profile (Russia's national product marking system). Every symbol is read back by the library itself before it is returned — a symbol that fails the self-check is never output. The public API does not throw: anything that can fail returns `Result<T>`.
 
 This repository contains the public headers, examples, documentation links and license texts. **It contains no library source code.** Prebuilt binaries are attached to [GitHub Releases](https://github.com/libscanner/datamatrix-generator/releases/latest).
+
+**Not open source:** every build runs a 30-day trial on a machine, then needs a paid license from <https://libscanner.com/en/pricing/>.
 
 **For AI coding assistants:** start with [`llms.txt`](llms.txt) — an index of the headers, examples and the full documentation in Markdown.
 
